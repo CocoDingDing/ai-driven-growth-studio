@@ -51,7 +51,7 @@ const Hero = () => {
               <div className="text-muted-foreground">No Code</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-4xl font-bold text-primary mb-2">3 à 7 j</div>
               <div className="text-muted-foreground">Délai de Livraison</div>
             </div>
           </div>
