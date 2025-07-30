@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-24">
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -41,7 +41,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">30+</div>
               <div className="text-muted-foreground">Solutions Disponibles</div>
