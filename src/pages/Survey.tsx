@@ -169,7 +169,7 @@ const Survey = () => {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Sondage: quelles avancées vous apporter le plus de valeur?
+            Sondage: Quelles avancées pourraient vous apporter le plus de valeur?
           </h1>
         </div>
 
