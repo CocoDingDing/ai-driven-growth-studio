@@ -195,8 +195,10 @@ const Survey = () => {
             </CardContent>
           </Card>
 
-          {/* Liste des produits */}
-          <Card>
+          {firstName && (
+            <>
+              {/* Liste des produits */}
+              <Card>
             <CardHeader>
               <CardTitle>Sélectionnez les solutions qui vous intéressent</CardTitle>
             </CardHeader>
@@ -277,17 +279,19 @@ const Survey = () => {
             </CardContent>
           </Card>
 
-          {/* Bouton d'envoi */}
-          <div className="text-center">
-            <Button 
-              type="submit" 
-              size="lg"
-              className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
-              disabled={!firstName || !email}
-            >
-              Envoyer
-            </Button>
-          </div>
+              {/* Bouton d'envoi */}
+              <div className="text-center">
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
+                  disabled={!firstName || !email}
+                >
+                  Envoyer
+                </Button>
+              </div>
+            </>
+          )}
         </form>
       </div>
     </div>
