@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -6,6 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { supabase } from "@/integrations/supabase/client";
 
 const products = [
   {
@@ -136,6 +137,57 @@ const Survey = () => {
   const [company, setCompany] = useState("");
   const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [sessionId] = useState(() => crypto.randomUUID());
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Fonction pour sauvegarder les données sur Supabase
+  const saveToSupabase = async () => {
+    try {
+      const selectedProductTitles = selectedProducts.map(i => products[i].title);
+      
+      const { error } = await supabase
+        .from('survey_responses')
+        .upsert({
+          session_id: sessionId,
+          first_name: firstName || null,
+          email: email || null,
+          company: company || null,
+          selected_products: selectedProductTitles,
+        }, {
+          onConflict: 'session_id'
+        });
+
+      if (error) {
+        console.error('Erreur lors de la sauvegarde:', error);
+      }
+    } catch (error) {
+      console.error('Erreur lors de la sauvegarde:', error);
+    }
+  };
+
+  // Sauvegarder automatiquement après chaque changement (avec délai)
+  const debouncedSave = () => {
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current);
+    }
+    saveTimeoutRef.current = setTimeout(saveToSupabase, 500);
+  };
+
+  // Sauvegarder quand firstName, email, company ou selectedProducts changent
+  useEffect(() => {
+    if (firstName) { // Ne sauvegarder que si le prénom est renseigné
+      debouncedSave();
+    }
+  }, [firstName, email, company, selectedProducts]);
+
+  // Nettoyer le timeout au démontage du composant
+  useEffect(() => {
+    return () => {
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const toggleProduct = (index: number) => {
     setSelectedProducts(prev => 
