@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">No Code</div>
+              <div className="text-muted-foreground">100% adapté à vos besoins</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">3 à 7 j</div>
