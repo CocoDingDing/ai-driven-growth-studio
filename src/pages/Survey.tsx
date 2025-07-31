@@ -203,46 +203,44 @@ const Survey = () => {
             <CardContent>
               <div className="space-y-4">
                 {products.map((product, index) => (
-                  <div key={index} className="border border-border/50 rounded-lg p-4 hover:border-primary/50 transition-colors">
-                    <div className="flex items-start space-x-3">
-                      <Checkbox
-                        id={`product-${index}`}
-                        checked={selectedProducts.includes(index)}
-                        onCheckedChange={() => toggleProduct(index)}
-                        className="mt-1"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between">
+                  <Collapsible key={index} open={openItems.includes(index)} onOpenChange={() => toggleOpen(index)}>
+                    <div className="border border-border/50 rounded-lg p-4 hover:border-primary/50 transition-colors">
+                      <div className="flex items-center space-x-3">
+                        <Checkbox
+                          id={`product-${index}`}
+                          checked={selectedProducts.includes(index)}
+                          onCheckedChange={() => toggleProduct(index)}
+                        />
+                        <CollapsibleTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="p-1 h-auto"
+                          >
+                            {openItems.includes(index) ? (
+                              <ChevronUp size={16} />
+                            ) : (
+                              <ChevronDown size={16} />
+                            )}
+                          </Button>
+                        </CollapsibleTrigger>
+                        <div className="flex-1">
                           <Label 
                             htmlFor={`product-${index}`}
-                            className="font-medium cursor-pointer"
+                            className="font-medium cursor-pointer flex items-center space-x-2"
                           >
-                            {product.title}
+                            <span className="text-primary font-bold">{index + 1}.</span>
+                            <span>{product.title}</span>
                           </Label>
-                          <Collapsible open={openItems.includes(index)} onOpenChange={() => toggleOpen(index)}>
-                            <CollapsibleTrigger asChild>
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                className="p-1 h-auto"
-                              >
-                                {openItems.includes(index) ? (
-                                  <ChevronUp size={16} />
-                                ) : (
-                                  <ChevronDown size={16} />
-                                )}
-                              </Button>
-                            </CollapsibleTrigger>
-                            <CollapsibleContent className="mt-2">
-                              <p className="text-sm text-muted-foreground">
-                                {product.description}
-                              </p>
-                            </CollapsibleContent>
-                          </Collapsible>
                         </div>
                       </div>
+                      <CollapsibleContent className="mt-3 ml-12">
+                        <p className="text-sm text-muted-foreground">
+                          {product.description}
+                        </p>
+                      </CollapsibleContent>
                     </div>
-                  </div>
+                  </Collapsible>
                 ))}
               </div>
             </CardContent>
