@@ -308,13 +308,12 @@ const Survey = () => {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="email">Adresse email *</Label>
+                  <Label htmlFor="email">Adresse email (optionnel)</Label>
                   <Input
                     id="email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required
                     className="mt-2"
                   />
                 </div>
@@ -337,7 +336,7 @@ const Survey = () => {
                   type="submit" 
                   size="lg"
                   className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
-                  disabled={!firstName || !email}
+                  disabled={!firstName}
                 >
                   Envoyer
                 </Button>
