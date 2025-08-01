@@ -36,6 +36,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
+              onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Découvrir nos Solutions
             </Button>
