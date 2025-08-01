@@ -3,20 +3,20 @@ import { Button } from "@/components/ui/button";
 
 const products = [
   {
-    title: "Création de sites Webs en CRM et/ou ERP",
-    description: "Création de plateformes complètes et complexes pour gérer vos clients, suivi, facturation, prospects, livraisons, comptabilité…"
-  },
-  {
-    title: "Assistant virtuel personnalisé pour les TPE/PME",
-    description: "Développement d'assistants IA sur-mesure (prise de rendez-vous, gestion d'e-mails, automatisation des tâches administratives)."
-  },
-  {
     title: "Automatisation de la prospection commerciale",
     description: "Système qui génère, qualifie et contacte automatiquement des leads via e-mail, LinkedIn ou SMS."
   },
   {
     title: "Création de sites web en IA/No code",
     description: "Création de sites webs optimisés, avec textes percutants, design léché et moderne, et SEO en rapidité éclair."
+  },
+  {
+    title: "Assistant virtuel personnalisé pour les TPE/PME",
+    description: "Développement d'assistants IA sur-mesure (prise de rendez-vous, gestion d'e-mails, automatisation des tâches administratives)."
+  },
+  {
+    title: "Création de sites Webs en CRM (Gestion de la relation client) et/ou ERP (Gestion des ressources internes de l'entreprise, avec indicateurs)",
+    description: "Création de plateformes complètes et complexes pour gérer vos clients, suivi, facturation, prospects, livraisons, comptabilité…"
   },
   {
     title: "Générateur de contenus automatisé",
