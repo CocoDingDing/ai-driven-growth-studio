@@ -234,7 +234,7 @@ const SurveySection = () => {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="firstName">Prénom *</Label>
+                  <Label htmlFor="firstName">Prénom</Label>
                   <Input
                     id="firstName"
                     value={firstName}
