@@ -344,6 +344,24 @@ const SurveySection = () => {
             </>
           )}
         </form>
+        
+        <div className="text-center mt-16">
+          <div className="bg-gradient-card border border-border/50 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Prêt à transformer votre business ?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Réservez un appel gratuit pour discuter de vos besoins et découvrir comment nos solutions peuvent vous aider.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
+              onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
+            >
+              Réserver un Appel Gratuit
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
