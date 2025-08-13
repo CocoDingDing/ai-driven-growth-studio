@@ -34,11 +34,11 @@ const products = [
     description: "Solution SaaS qui analyse un site web ou une appli et propose des recommandations UX grâce à l'IA."
   },
   {
-    title: "Créateur de chatbots sans code",
+    title: "Création de chatbots sans code",
     description: "Outil qui permet à toute entreprise de créer, entraîner et intégrer un chatbot sans compétences techniques."
   },
   {
-    title: "Générateur d'images/visuels pour le marketing",
+    title: "Génération d'images/visuels pour le marketing",
     description: "Plateforme qui produit des visuels, bannières, carrousels ou vidéos courtes grâce à l'IA générative."
   },
   {
@@ -62,7 +62,7 @@ const products = [
     description: "Recrutement automatisé : sourcing, tri de CV, préqualification, planification des entretiens."
   },
   {
-    title: "Créateur de parcours d'onboarding interactifs",
+    title: "Création de parcours d'onboarding interactifs",
     description: "Outil qui génère des parcours d'onboarding automatisés et personnalisés pour nouveaux employés ou clients."
   },
   {
@@ -90,7 +90,7 @@ const products = [
     description: "Place de marché proposant des mini-tâches automatisées (ex : nettoyage de base de données, vérification d'e-mails, extraction de données)."
   },
   {
-    title: "Créateur d'emails de prospection sur-mesure",
+    title: "Création d'emails de prospection sur-mesure",
     description: "Outil qui génère des séquences d'e-mails ultra-personnalisées et qui gère l'envoi et le suivi."
   },
   {
@@ -110,7 +110,7 @@ const products = [
     description: "Outil no code qui récupère les données clés (finance, web, CRM…), les synthétise et alimente des dashboards dynamiques."
   },
   {
-    title: "Générateur d'idées de contenus/produits",
+    title: "Génération d'idées de contenus/produits",
     description: "IA qui suggère des idées de contenus, produits, offres à partir de tendances, mots-clés ou objectifs business."
   },
   {
