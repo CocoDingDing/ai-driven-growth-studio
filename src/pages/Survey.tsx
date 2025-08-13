@@ -26,7 +26,7 @@ const products = [
     description: "Création de plateformes complètes et complexes pour gérer vos clients, suivi, facturation, prospects, livraisons, comptabilité…"
   },
   {
-    title: "Générateur de contenus automatisé",
+    title: "Génération de contenus automatisé",
     description: "Plateforme qui crée automatiquement des posts LinkedIn, articles de blog ou newsletters à partir de prompts simples."
   },
   {
