@@ -102,11 +102,13 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-cosmic': 'var(--gradient-cosmic)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'cosmic': 'var(--shadow-cosmic)',
 				'card-custom': 'var(--shadow-card)'
 			}
 		}
