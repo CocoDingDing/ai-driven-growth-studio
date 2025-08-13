@@ -11,7 +11,7 @@ const CosmicBackground = () => {
         }}
       />
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/90" />
     </>
   );
 };
