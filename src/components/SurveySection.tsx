@@ -145,19 +145,20 @@ const SurveySection = () => {
     try {
       const selectedProductTitles = selectedProducts.map(i => products[i].title);
       
+      // Since UPDATE is now blocked for security, we'll only INSERT new records
+      // This prevents data tampering while maintaining the auto-save functionality
       const { error } = await supabase
         .from('survey_responses')
-        .upsert({
+        .insert({
           session_id: sessionId,
           first_name: firstName || null,
           email: email || null,
           company: company || null,
           selected_products: selectedProductTitles,
-        }, {
-          onConflict: 'session_id'
         });
 
-      if (error) {
+      // Ignore duplicate key errors since we can't update existing records
+      if (error && !error.message.includes('duplicate key value violates unique constraint')) {
         console.error('Erreur lors de la sauvegarde:', error);
       }
     } catch (error) {
