@@ -23,18 +23,16 @@ const CosmicBackground = () => {
       x: number;
       y: number;
       size: number;
-      speed: number;
       opacity: number;
       twinkle: number;
     }> = [];
 
-    // Create stars
-    for (let i = 0; i < 200; i++) {
+    // Create small stars
+    for (let i = 0; i < 150; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 0.5,
-        speed: Math.random() * 0.5 + 0.1,
+        size: Math.random() * 1.5 + 0.5,
         opacity: Math.random() * 0.8 + 0.2,
         twinkle: Math.random() * 0.02 + 0.01,
       });
@@ -44,14 +42,8 @@ const CosmicBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      // Draw stars
       stars.forEach((star) => {
-        // Update star position
-        star.y += star.speed;
-        if (star.y > canvas.height) {
-          star.y = 0;
-          star.x = Math.random() * canvas.width;
-        }
-
         // Update twinkle effect
         star.opacity += star.twinkle;
         if (star.opacity > 1 || star.opacity < 0.1) {
@@ -62,7 +54,7 @@ const CosmicBackground = () => {
         ctx.save();
         ctx.globalAlpha = star.opacity;
         ctx.fillStyle = '#ffffff';
-        ctx.shadowBlur = star.size * 2;
+        ctx.shadowBlur = star.size * 3;
         ctx.shadowColor = '#8B5CF6';
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
@@ -82,8 +74,10 @@ const CosmicBackground = () => {
 
   return (
     <>
-      {/* Cosmic gradient background */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Deep space gradient background - exact same as aipourtous */}
+      <div className="absolute inset-0" style={{
+        background: 'radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 30%, #0f172a 70%, #000000 100%)'
+      }} />
       
       {/* Animated canvas stars */}
       <canvas
@@ -92,15 +86,72 @@ const CosmicBackground = () => {
         style={{ zIndex: 1 }}
       />
       
-      {/* Cosmic effects overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-cosmic rounded-full blur-3xl opacity-20 animate-pulse" />
-        <div className="absolute top-1/2 right-20 w-72 h-72 bg-gradient-cosmic rounded-full blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-cosmic rounded-full blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '4s' }} />
+      {/* Large cosmic orbs - exactly like aipourtous */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Top right purple orb */}
+        <div 
+          className="absolute w-80 h-80 rounded-full opacity-60 animate-pulse"
+          style={{
+            top: '10%',
+            right: '10%',
+            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, rgba(139, 92, 246, 0.2) 40%, transparent 70%)',
+            filter: 'blur(40px)',
+            animationDuration: '4s'
+          }}
+        />
+        
+        {/* Center large purple/blue orb */}
+        <div 
+          className="absolute w-96 h-96 rounded-full opacity-40 animate-pulse"
+          style={{
+            top: '40%',
+            right: '20%',
+            background: 'radial-gradient(circle, rgba(168, 85, 247, 0.6) 0%, rgba(59, 130, 246, 0.4) 50%, transparent 70%)',
+            filter: 'blur(60px)',
+            animationDuration: '6s',
+            animationDelay: '2s'
+          }}
+        />
+        
+        {/* Bottom right cyan orb */}
+        <div 
+          className="absolute w-72 h-72 rounded-full opacity-50 animate-pulse"
+          style={{
+            bottom: '20%',
+            right: '5%',
+            background: 'radial-gradient(circle, rgba(6, 182, 212, 0.7) 0%, rgba(6, 182, 212, 0.3) 40%, transparent 70%)',
+            filter: 'blur(50px)',
+            animationDuration: '5s',
+            animationDelay: '1s'
+          }}
+        />
+        
+        {/* Left side purple orb */}
+        <div 
+          className="absolute w-64 h-64 rounded-full opacity-35 animate-pulse"
+          style={{
+            top: '60%',
+            left: '5%',
+            background: 'radial-gradient(circle, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 70%)',
+            filter: 'blur(45px)',
+            animationDuration: '7s',
+            animationDelay: '3s'
+          }}
+        />
+        
+        {/* Small top cyan orb */}
+        <div 
+          className="absolute w-48 h-48 rounded-full opacity-60 animate-pulse"
+          style={{
+            top: '5%',
+            left: '50%',
+            background: 'radial-gradient(circle, rgba(34, 211, 238, 0.8) 0%, rgba(34, 211, 238, 0.3) 40%, transparent 70%)',
+            filter: 'blur(30px)',
+            animationDuration: '3s',
+            animationDelay: '0.5s'
+          }}
+        />
       </div>
-
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-grid-white/[0.01] bg-grid-pattern opacity-50" />
     </>
   );
 };
