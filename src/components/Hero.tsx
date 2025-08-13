@@ -47,10 +47,10 @@ const Hero = () => {
               <div className="text-4xl font-bold text-primary mb-2">30+</div>
               <div className="text-muted-foreground">Solutions Disponibles</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">Adapté à Vos Besoins</div>
-            </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-violet-600 mb-2">70%</div>
+            <div className="text-muted-foreground">d'Economies</div>
+          </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">2 X</div>
               <div className="text-muted-foreground">Temps gagné</div>
