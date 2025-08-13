@@ -145,6 +145,7 @@ const Survey = () => {
     try {
       const selectedProductTitles = selectedProducts.map(i => products[i].title);
       
+      // Use upsert for the Survey page to allow updating existing responses
       const { error } = await supabase
         .from('survey_responses')
         .upsert({
@@ -159,6 +160,10 @@ const Survey = () => {
 
       if (error) {
         console.error('Erreur lors de la sauvegarde:', error);
+        // Database validation errors will be caught here
+        if (error.message.includes('Invalid email format')) {
+          console.warn('Email format invalide détecté');
+        }
       }
     } catch (error) {
       console.error('Erreur lors de la sauvegarde:', error);
