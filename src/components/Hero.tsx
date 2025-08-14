@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <Button 
               size="lg" 
-              className="bg-gradient-cosmic text-white text-lg px-8 py-6 shadow-cosmic hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="bg-gradient-cosmic text-white text-lg px-8 h-[4.5rem] shadow-cosmic hover:shadow-glow transition-all duration-300 hover:scale-105"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
               Réserver un Appel Gratuit
@@ -34,7 +34,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-6 border-accent/50 hover:bg-accent/10 text-foreground hover:text-accent"
+              className="text-lg px-8 h-[4.5rem] border-accent/50 hover:bg-accent/10 text-foreground hover:text-accent"
               onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Découvrir nos Solutions
