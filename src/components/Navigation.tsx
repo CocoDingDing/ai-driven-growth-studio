@@ -23,7 +23,7 @@ const Navigation = () => {
           </div>
           
           <Button 
-            className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+            variant="hero"
             onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
           >
             Réserver un Appel
