@@ -43,7 +43,6 @@ const ExpertiseSection = () => {
               <li>• Gestion automatisée de la facturation</li>
               <li>• Optimisation automatique de publicités en ligne</li>
               <li>• Automatisation du support client</li>
-              <li className="font-medium">+7 autres produits</li>
             </ul>
           </div>
           
