@@ -42,7 +42,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-7">
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">30+</div>
               <div className="text-muted-foreground">Solutions Disponibles</div>
