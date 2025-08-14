@@ -359,8 +359,9 @@ const SurveySection = () => {
               Réservez un appel gratuit pour discuter de vos besoins et découvrir comment nos solutions peuvent vous aider.
             </p>
             <Button 
+              variant="hero"
               size="lg" 
-              className="bg-gradient-primary text-lg px-8 h-[4.5rem] w-[270px] shadow-glow hover:shadow-lg transition-all duration-300"
+              className="text-lg px-8 h-[4.5rem] w-[270px]"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
               Consultation gratuite

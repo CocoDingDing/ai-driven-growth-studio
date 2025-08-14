@@ -25,8 +25,9 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <Button 
+              variant="hero"
               size="lg" 
-              className="bg-gradient-cosmic text-white text-lg px-8 h-[4.5rem] w-[270px] shadow-cosmic hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 h-[4.5rem] w-[270px]"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
               Consultation gratuite
