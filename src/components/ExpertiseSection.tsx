@@ -12,7 +12,7 @@ const ExpertiseSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-center hover:bg-background/70 transition-all duration-300">
+          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-background/70 transition-all duration-300">
             <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
               🤖
             </div>
@@ -22,7 +22,7 @@ const ExpertiseSection = () => {
             </p>
           </div>
           
-          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-center hover:bg-background/70 transition-all duration-300">
+          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-background/70 transition-all duration-300">
             <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
               ⚡
             </div>
@@ -32,7 +32,7 @@ const ExpertiseSection = () => {
             </p>
           </div>
           
-          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-center hover:bg-background/70 transition-all duration-300">
+          <div className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-background/70 transition-all duration-300">
             <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
               🛠️
             </div>
