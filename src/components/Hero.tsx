@@ -29,7 +29,7 @@ const Hero = () => {
               className="bg-gradient-cosmic text-white text-lg px-8 h-[4.5rem] shadow-cosmic hover:shadow-glow transition-all duration-300 hover:scale-105"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
-              Réserver un Appel Gratuit
+              Consultation gratuite
             </Button>
             <Button 
               variant="outline" 
