@@ -361,7 +361,7 @@ const SurveySection = () => {
             <Button 
               variant="hero"
               size="lg" 
-              className="text-lg px-8 h-[4.5rem] w-[272px]"
+              className="text-lg px-8 h-[4.5rem] w-[275px]"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
               Consultation gratuite
