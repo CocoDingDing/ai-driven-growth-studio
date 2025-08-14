@@ -6,7 +6,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
+            <div className="w-8 h-8 bg-gradient-hero rounded-lg"></div>
             <span className="text-xl font-bold text-foreground">AI Solutions</span>
           </div>
           
