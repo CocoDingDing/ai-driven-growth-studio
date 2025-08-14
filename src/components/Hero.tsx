@@ -27,7 +27,7 @@ const Hero = () => {
             <Button 
               variant="hero"
               size="lg" 
-              className="text-lg px-8 h-[4.5rem] w-[275px]"
+              className="text-lg px-8 h-[4.5rem] w-[270px]"
               onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
             >
               Consultation gratuite
@@ -35,7 +35,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 h-[4.5rem] w-[275px] border-accent/50 hover:bg-accent/10 text-foreground hover:text-accent"
+              className="text-lg px-8 h-[4.5rem] w-[270px] border-accent/50 hover:bg-accent/10 text-foreground hover:text-accent"
               onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Découvrir nos Solutions
