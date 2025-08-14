@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-24">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-cosmic bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-hero bg-clip-text text-transparent">
               Transformez Votre Business
             </h1>
             <h2 className="text-3xl md:text-5xl font-semibold text-foreground/90">
