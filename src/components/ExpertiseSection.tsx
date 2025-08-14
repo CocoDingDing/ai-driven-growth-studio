@@ -13,7 +13,7 @@ const ExpertiseSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               🤖
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Solutions IA</h3>
@@ -23,7 +23,7 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               ⚡
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Automatisation</h3>
@@ -33,7 +33,7 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-6xl mb-6 group-hover:scale-110 transition-smooth">
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               🛠️
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
