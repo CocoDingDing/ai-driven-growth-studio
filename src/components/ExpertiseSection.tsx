@@ -17,7 +17,7 @@ const ExpertiseSection = () => {
               🤖
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Solutions IA</h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-4">
               Assistants virtuels intelligents et outils d'analyse automatisée pour transformer vos processus métier.
             </p>
           </div>
@@ -27,7 +27,7 @@ const ExpertiseSection = () => {
               ⚡
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Automatisation</h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-4">
               Automatisation complète de vos processus commerciaux, marketing et opérationnels pour maximiser votre efficacité.
             </p>
           </div>
@@ -37,7 +37,7 @@ const ExpertiseSection = () => {
               🛠️
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-4">
               Création rapide d'applications et plateformes complètes sans développement traditionnel.
             </p>
           </div>
