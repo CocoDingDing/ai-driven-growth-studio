@@ -234,7 +234,7 @@ const SurveySection = () => {
           {/* Prénom */}
           <Card>
             <CardHeader>
-              <CardTitle>Informations personnelles</CardTitle>
+              <CardTitle className="text-lg">Tapez votre prénom pour voir la liste des propositions de produits</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
