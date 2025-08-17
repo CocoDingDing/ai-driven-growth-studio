@@ -1,6 +1,6 @@
 const ProductExamplesSection = () => {
   return (
-    <section className="pt-12 pb-6 px-6 bg-background">
+    <section className="pt-12 pb-2 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-hero bg-clip-text text-transparent">

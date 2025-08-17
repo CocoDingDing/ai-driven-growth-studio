@@ -221,7 +221,7 @@ const SurveySection = () => {
   };
 
   return (
-    <section id="survey" className="py-20 px-6 bg-background">
+    <section id="survey" className="py-12 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
