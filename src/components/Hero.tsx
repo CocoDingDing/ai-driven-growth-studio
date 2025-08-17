@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
           
           {/* Extended background space */}
-          <div className="h-32"></div>
+          <div className="h-8"></div>
         </div>
       </div>
     </section>
