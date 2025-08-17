@@ -16,7 +16,7 @@ const ExpertiseSection = () => {
             <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               🤖
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Solutions IA</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Solutions IA</h3>
             <p className="text-sm text-muted-foreground">
               Assistants virtuels intelligents et outils d'analyse automatisée pour transformer vos processus métier.
             </p>
@@ -26,7 +26,7 @@ const ExpertiseSection = () => {
             <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               ⚡
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Automatisation</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Automatisation</h3>
             <p className="text-sm text-muted-foreground">
               Automatisation complète de vos processus commerciaux, marketing et opérationnels pour maximiser votre efficacité.
             </p>
@@ -36,7 +36,7 @@ const ExpertiseSection = () => {
             <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               🛠️
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
             <p className="text-sm text-muted-foreground">
               Création rapide d'applications et plateformes complètes sans développement traditionnel.
             </p>
