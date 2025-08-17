@@ -1,6 +1,6 @@
 const ProductExamplesSection = () => {
   return (
-    <section className="pt-12 pb-0 px-6 bg-background">
+    <section className="pt-12 pb-6 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-hero bg-clip-text text-transparent">
@@ -32,10 +32,6 @@ const ProductExamplesSection = () => {
               <li className="flex items-start">
                 <span className="text-accent mr-3 mt-1">•</span>
                 Assistant virtuel personnalisé pour les TPE/PME
-              </li>
-              <li className="flex items-start">
-                <span className="text-accent mr-3 mt-1">•</span>
-                et beaucoup d'autres encore
               </li>
             </ul>
           </div>
