@@ -233,7 +233,10 @@ const SurveySection = () => {
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Prénom */}
           <Card>
-            <CardContent className="pt-6">
+            <CardHeader>
+              <CardTitle>Informations personnelles</CardTitle>
+            </CardHeader>
+            <CardContent>
               <div className="space-y-4">
                 <div>
                   <Label htmlFor="firstName">Prénom</Label>
