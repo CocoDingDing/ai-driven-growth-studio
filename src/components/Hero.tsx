@@ -56,6 +56,9 @@ const Hero = () => {
               <div className="text-muted-foreground">Temps gagné</div>
             </div>
           </div>
+          
+          {/* Extended background space */}
+          <div className="h-32"></div>
         </div>
       </div>
     </section>
