@@ -33,6 +33,10 @@ const ProductExamplesSection = () => {
                 <span className="text-accent mr-3 mt-1">•</span>
                 Assistant virtuel personnalisé pour les TPE/PME
               </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-1">•</span>
+                et beaucoup d'autres encore
+              </li>
             </ul>
           </div>
         </div>
