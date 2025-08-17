@@ -224,7 +224,7 @@ const SurveySection = () => {
     <section id="survey" className="py-8 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-hero bg-clip-text text-transparent leading-tight">
             Sondage / Nos produits :
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
