@@ -4,7 +4,7 @@ const ProductExamplesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-hero bg-clip-text text-transparent">
-            Quelques exemples de nos produits :
+            Quelques exemples de nos produits
           </h2>
           
           <div className="max-w-4xl mx-auto">
