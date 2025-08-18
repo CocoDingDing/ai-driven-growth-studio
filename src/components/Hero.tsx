@@ -52,7 +52,7 @@ const Hero = () => {
               <div className="text-muted-foreground">d'Economies</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">2 X</div>
+              <div className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">2X</div>
               <div className="text-muted-foreground">Temps gagné</div>
             </div>
           </div>
