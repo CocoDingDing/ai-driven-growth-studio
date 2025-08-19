@@ -24,8 +24,9 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
-              ⚡
+            <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/cb47a3e5-3b02-4f4f-998c-c72e345111fe.png" alt="Automation Icon" className="w-12 h-12" />
+              <span className="text-5xl">⚡</span>
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Automatisation</h3>
             <p className="text-sm text-muted-foreground">
