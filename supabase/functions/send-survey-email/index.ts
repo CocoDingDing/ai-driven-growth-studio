@@ -37,19 +37,54 @@ serve(async (req: Request) => {
       </ul>
     `;
 
-    const { error } = await resend.emails.send({
+    // Envoyer l'email à mathieu777@gmail.com
+    const { error: adminError } = await resend.emails.send({
       from: "Lovable <onboarding@resend.dev>",
       to: ["mathieu777@gmail.com"],
       subject,
       html,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return new Response(JSON.stringify({ error: error.message }), {
+    if (adminError) {
+      console.error("Admin email error:", adminError);
+      return new Response(JSON.stringify({ error: adminError.message }), {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
+    }
+
+    // Envoyer un email de confirmation à l'utilisateur s'il a fourni son email
+    if (email) {
+      const userSubject = "Confirmation de votre sondage - Merci pour votre participation";
+      const userHtml = `
+        <h1>Merci ${firstName} !</h1>
+        <p>Nous avons bien reçu votre sondage. Voici un récapitulatif de vos réponses :</p>
+        
+        <h2>Vos informations</h2>
+        <p><strong>Prénom:</strong> ${firstName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        ${company ? `<p><strong>Entreprise:</strong> ${company}</p>` : ''}
+        
+        <h2>Solutions qui vous intéressent</h2>
+        <ul>
+          ${(selectedProducts || []).map((p: string) => `<li>${p}</li>`).join("") || "<li>Aucune solution sélectionnée</li>"}
+        </ul>
+        
+        <p>Nous reviendrons vers vous très prochainement pour discuter de vos besoins.</p>
+        <p>À bientôt !</p>
+      `;
+
+      const { error: userError } = await resend.emails.send({
+        from: "Lovable <onboarding@resend.dev>",
+        to: [email],
+        subject: userSubject,
+        html: userHtml,
+      });
+
+      if (userError) {
+        console.error("User email error:", userError);
+        // On continue même si l'email utilisateur échoue
+      }
     }
 
     return new Response(JSON.stringify({ success: true }), {
