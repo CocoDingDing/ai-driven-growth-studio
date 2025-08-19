@@ -13,8 +13,9 @@ const ExpertiseSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
-              🤖
+            <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/bc95b3f5-6ea5-460e-b074-ef26b2cea060.png" alt="AI Brain Icon" className="w-12 h-12" />
+              <span className="text-5xl">🤖</span>
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Solutions IA</h3>
             <p className="text-sm text-muted-foreground">
@@ -23,8 +24,10 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
-              ⚡
+            <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/f0967252-8e17-4ab0-84c0-46657ff0858a.png" alt="Automation Icon" className="w-12 h-12" />
+              <img src="/lovable-uploads/cb47a3e5-3b02-4f4f-998c-c72e345111fe.png" alt="Automation Icon" className="w-12 h-12" />
+              <span className="text-5xl">⚡</span>
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Automatisation</h3>
             <p className="text-sm text-muted-foreground">
@@ -33,8 +36,10 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
-              🛠️
+            <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/0bce4244-bf00-4cd1-aed6-2a395e1e1342.png" alt="No-Code Icon" className="w-12 h-12" />
+              <img src="/lovable-uploads/a1e0ce32-9cac-4ae7-a8fc-57e4c8ef1e69.png" alt="No-Code Icon" className="w-12 h-12" />
+              <span className="text-5xl">🛠️</span>
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
             <p className="text-sm text-muted-foreground">
