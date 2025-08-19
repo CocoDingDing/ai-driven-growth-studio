@@ -139,6 +139,8 @@ const Survey = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const [sessionId] = useState(() => crypto.randomUUID());
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   // Fonction pour sauvegarder les données sur Supabase
   const saveToSupabase = async () => {
@@ -210,16 +212,29 @@ const Survey = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({
-      firstName,
-      email,
-      company,
-      selectedProducts: selectedProducts.map(i => products[i].title)
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    setSubmitting(true);
+    const selectedProductTitles = selectedProducts.map(i => products[i].title);
+    await saveToSupabase();
+    const { error } = await supabase.functions.invoke('send-survey-email', {
+      body: {
+        firstName,
+        email,
+        company,
+        selectedProducts: selectedProductTitles,
+        sessionId,
+      },
     });
-    // Here you would send the data to your backend
-  };
+    if (error) throw error;
+    setSubmitted(true);
+  } catch (err) {
+    console.error('Erreur lors de l’envoi du sondage:', err);
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-background">
@@ -337,16 +352,21 @@ const Survey = () => {
           </Card>
 
               {/* Bouton d'envoi */}
-              <div className="text-center">
-                <Button 
-                  type="submit" 
-                  size="lg"
-                  className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
-                  disabled={!firstName}
-                >
-                  Envoyer
-                </Button>
-              </div>
+<div className="text-center">
+  <Button 
+    type="submit" 
+    size="lg"
+    className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
+    disabled={!firstName || submitting}
+  >
+    {submitting ? 'Envoi…' : 'Envoyer'}
+  </Button>
+  {submitted && (
+    <p className="mt-4 text-sm text-muted-foreground">
+      Nous avons bien reçu les réponses de votre sondage. Merci beaucoup.
+    </p>
+  )}
+</div>
             </>
           )}
         </form>
