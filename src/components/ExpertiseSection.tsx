@@ -13,8 +13,9 @@ const ExpertiseSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
-              🤖
+            <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/bc95b3f5-6ea5-460e-b074-ef26b2cea060.png" alt="AI Brain Icon" className="w-12 h-12" />
+              <span className="text-5xl">🤖</span>
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Solutions IA</h3>
             <p className="text-sm text-muted-foreground">
