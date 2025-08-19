@@ -36,6 +36,7 @@ const ExpertiseSection = () => {
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6 group-hover:scale-110 transition-smooth">
+              <img src="/lovable-uploads/0bce4244-bf00-4cd1-aed6-2a395e1e1342.png" alt="No-Code Icon" className="w-12 h-12" />
               <img src="/lovable-uploads/a1e0ce32-9cac-4ae7-a8fc-57e4c8ef1e69.png" alt="No-Code Icon" className="w-12 h-12" />
               <span className="text-5xl">🛠️</span>
             </div>
