@@ -1,7 +1,3 @@
-import aiBrainIcon from "@/assets/ai-brain-icon.png";
-import automationGearsIcon from "@/assets/automation-gears-icon.png";
-import nocodeBlocksIcon from "@/assets/nocode-blocks-icon.png";
-
 const ExpertiseSection = () => {
   return (
     <section className="py-12 px-6 bg-gradient-card">
@@ -17,8 +13,8 @@ const ExpertiseSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-smooth">
-              <img src={aiBrainIcon} alt="Solutions IA" className="w-full h-full object-contain" />
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
+              🤖
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Solutions IA</h3>
             <p className="text-sm text-muted-foreground">
@@ -27,8 +23,8 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-smooth">
-              <img src={automationGearsIcon} alt="Automatisation" className="w-full h-full object-contain" />
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
+              ⚡
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Automatisation</h3>
             <p className="text-sm text-muted-foreground">
@@ -37,8 +33,8 @@ const ExpertiseSection = () => {
           </div>
           
           <div className="group bg-gray-800/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-left hover:bg-gray-700/90 transition-all duration-300">
-            <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-smooth">
-              <img src={nocodeBlocksIcon} alt="Plateformes No-Code" className="w-full h-full object-contain" />
+            <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
+              🛠️
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">Plateformes No-Code</h3>
             <p className="text-sm text-muted-foreground">
