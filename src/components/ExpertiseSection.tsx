@@ -1,6 +1,6 @@
-import aiSolutionsIcon from "@/assets/ai-solutions-icon.png";
-import automationIcon from "@/assets/automation-icon.png";
-import nocodeIcon from "@/assets/nocode-icon.png";
+const aiSolutionsIcon = "/lovable-uploads/e411b46a-1649-4a65-9741-93bc0e8020a2.png";
+const automationIcon = "/lovable-uploads/b36eb994-ffc7-4787-a860-1b34d96a7372.png";
+const nocodeIcon = "/lovable-uploads/99f01a82-57d4-4a77-ba92-46f272d05bce.png";
 
 const ExpertiseSection = () => {
   return (
