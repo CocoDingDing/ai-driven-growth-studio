@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import ProductExamplesSection from "@/components/ProductExamplesSection";
 import SurveySection from "@/components/SurveySection";
+import ProductChatbot from "@/components/ProductChatbot";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <ExpertiseSection />
       <ProductExamplesSection />
       <SurveySection />
+      <ProductChatbot />
     </div>
   );
 };
