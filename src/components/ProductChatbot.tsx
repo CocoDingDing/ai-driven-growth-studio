@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { MessageSquare, X, Send, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
@@ -90,17 +90,18 @@ const ProductChatbot = () => {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-primary shadow-glow hover:shadow-lg transition-all duration-300"
+          variant="hero"
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full"
           size="icon"
         >
-          <MessageCircle size={24} />
+          <MessageSquare size={24} />
         </Button>
       )}
 
       {/* Interface du chatbot */}
       {isOpen && (
         <Card className="fixed bottom-6 right-6 z-50 w-96 h-[500px] bg-background border-primary/20 shadow-2xl">
-          <CardHeader className="bg-gradient-primary text-white p-4 rounded-t-lg">
+          <CardHeader className="bg-gradient-hero text-white p-4 rounded-t-lg">
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-semibold">
                 Assistant IA & Automatisation
@@ -127,7 +128,7 @@ const ProductChatbot = () => {
                   <div
                     className={`max-w-[80%] p-3 rounded-lg text-sm ${
                       message.isUser
-                        ? 'bg-gradient-primary text-white'
+                        ? 'bg-gradient-hero text-white'
                         : 'bg-muted text-foreground'
                     }`}
                   >
@@ -163,7 +164,7 @@ const ProductChatbot = () => {
                   onClick={sendMessage}
                   disabled={!inputMessage.trim() || isLoading}
                   size="icon"
-                  className="bg-gradient-primary"
+                  variant="hero"
                 >
                   <Send size={16} />
                 </Button>
