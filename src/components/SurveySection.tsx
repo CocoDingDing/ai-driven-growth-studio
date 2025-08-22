@@ -388,7 +388,13 @@ const handleSubmit = async (e: React.FormEvent) => {
               Consultation gratuite
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
-              Pour toute information, contacter mathieu.hourteillan@gmail.com
+              Pour toute information, contacter{" "}
+              <a 
+                href="mailto:mathieu.hourteillan@gmail.com" 
+                className="text-primary hover:text-primary/80 transition-colors underline"
+              >
+                mathieu.hourteillan@gmail.com
+              </a>
             </p>
           </div>
         </div>
