@@ -17,7 +17,7 @@ const ProductChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Bonjour ! Je suis votre assistant virtuel. Posez-moi vos questions sur nos 30 solutions d'IA et d'automatisation. Comment puis-je vous aider ?",
+      content: "Bonjour ! Je suis votre assistant virtuel. Posez-moi vos questions sur nos 30 solutions d'IA et d'automatisation (Croissance commerciale ; Création de sites, applis, CRM et ERP ; Recrutement ; Finances ; User Experience...). Comment puis-je vous aider ?",
       isUser: false,
       timestamp: new Date(),
     }
