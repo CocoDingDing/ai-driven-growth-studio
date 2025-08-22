@@ -13,6 +13,9 @@ interface Message {
 }
 
 const ProductChatbot = () => {
+  // Masqué temporairement
+  return null;
+  
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
