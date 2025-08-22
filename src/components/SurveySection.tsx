@@ -391,7 +391,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               Pour toute information, contacter{" "}
               <a 
                 href="mailto:mathieu.hourteillan@gmail.com" 
-                className="text-[#346BF4] hover:text-[#2856d6] transition-colors underline"
+                className="text-[#2C6CF3] hover:text-[#1e57d9] transition-colors underline"
               >
                 mathieu.hourteillan@gmail.com
               </a>
