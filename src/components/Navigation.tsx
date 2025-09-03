@@ -14,7 +14,7 @@ const Navigation = () => {
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
               Services
             </a>
-            <a href="#products" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#survey" className="text-muted-foreground hover:text-foreground transition-colors">
               Sondage / Nos produits
             </a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">

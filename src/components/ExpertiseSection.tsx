@@ -1,6 +1,6 @@
 const ExpertiseSection = () => {
   return (
-    <section className="py-12 px-6 bg-gradient-card">
+    <section id="services" className="py-12 px-6 bg-gradient-card">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
