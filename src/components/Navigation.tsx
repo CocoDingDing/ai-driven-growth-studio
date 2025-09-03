@@ -11,13 +11,34 @@ const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#services" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Services
             </a>
-            <a href="#survey" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#survey" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Sondage / Nos produits
             </a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#contact" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contact
             </a>
           </div>

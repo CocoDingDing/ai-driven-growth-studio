@@ -237,8 +237,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 };
 
   return (
-    <section id="survey contact" className="py-20 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-6 bg-background">
+      <div id="survey" className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
             Sondage / Nos produits:<br />
