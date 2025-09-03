@@ -16,7 +16,11 @@ const Navigation = () => {
               className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById('services');
+                if (element) {
+                  const offsetTop = element.offsetTop - 80;
+                  window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
               }}
             >
               Services
@@ -26,7 +30,11 @@ const Navigation = () => {
               className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById('survey');
+                if (element) {
+                  const offsetTop = element.offsetTop - 80;
+                  window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
               }}
             >
               Sondage / Nos produits
@@ -36,7 +44,11 @@ const Navigation = () => {
               className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById('contact');
+                if (element) {
+                  const offsetTop = element.offsetTop - 80;
+                  window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
               }}
             >
               Contact
