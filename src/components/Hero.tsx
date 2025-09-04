@@ -20,7 +20,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Spécialistes en création de sites web, CRM, ERP et solutions d'automatisation sur-mesure. 
-            Nous développons des outils No Code qui révolutionnent votre productivité.
+            Nous développons avec l'IA et l'automatisation des outils qui révolutionnent votre productivité.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
