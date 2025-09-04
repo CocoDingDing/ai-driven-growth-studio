@@ -36,7 +36,7 @@ const ExpertiseSection = () => {
             <div className="text-5xl mb-6 group-hover:scale-110 transition-smooth">
               🛠️
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">No-Code</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">No-Code / Low-Code</h3>
             <p className="text-sm text-muted-foreground">
               Création rapide d'applications et plateformes complètes sans développement traditionnel.
             </p>
