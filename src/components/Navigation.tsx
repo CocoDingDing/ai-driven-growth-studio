@@ -7,7 +7,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-hero rounded-lg"></div>
-            <span className="text-xl font-bold text-foreground">AI adoption</span>
+            <button 
+              className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              AI adoption
+            </button>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
