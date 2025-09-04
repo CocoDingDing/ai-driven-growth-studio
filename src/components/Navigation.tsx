@@ -8,7 +8,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-hero rounded-lg"></div>
             <button 
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer"
+              className="text-xl font-bold text-foreground hover:text-accent transition-colors cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               AI adoption
