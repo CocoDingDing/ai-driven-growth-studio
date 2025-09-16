@@ -28,7 +28,7 @@ const Hero = () => {
               variant="hero"
               size="lg" 
               className="text-lg px-8 h-[4.5rem] w-[272px]"
-              onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
+              onClick={() => window.open('https://calendly.com/mathieu777/15min', '_blank')}
             >
               Consultation gratuite
             </Button>
