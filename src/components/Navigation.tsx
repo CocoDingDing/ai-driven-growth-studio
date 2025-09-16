@@ -63,7 +63,7 @@ const Navigation = () => {
           
           <Button 
             variant="hero"
-            onClick={() => window.open('https://advice.typeform.com/to/DT7U0IZd', '_blank')}
+            onClick={() => window.open('https://calendly.com/mathieu777/15min', '_blank')}
           >
             Réserver un Appel
           </Button>
