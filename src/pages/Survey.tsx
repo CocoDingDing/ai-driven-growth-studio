@@ -203,35 +203,6 @@ const Survey = () => {
                 </CardContent>
               </Card>
 
-              {/* Informations de contact */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Informations de contact</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="email">Adresse email (optionnel)</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="mt-2"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="company">Nom de l'entreprise (optionnel)</Label>
-                      <Input
-                        id="company"
-                        value={company}
-                        onChange={(e) => setCompany(e.target.value)}
-                        className="mt-2"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
 
               {/* Bouton d'envoi */}
               <div className="text-center">
