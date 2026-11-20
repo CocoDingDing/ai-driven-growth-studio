@@ -5,8 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Sur GitHub Pages, le site vit dans le sous-dossier /ai-driven-growth-studio/
-  base: process.env.GITHUB_PAGES ? "/ai-driven-growth-studio/" : "/",
+  // Sur GitHub Pages, le site vit dans un sous-dossier qui porte le nom du dépôt
+  // (BASE_PATH est fourni par le workflow de déploiement). Ailleurs : racine "/".
+  base: process.env.BASE_PATH || "/",
   server: {
     host: "::",
     port: 8080,
