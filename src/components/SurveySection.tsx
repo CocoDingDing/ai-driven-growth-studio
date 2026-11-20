@@ -268,8 +268,8 @@ const handleSubmit = async (e: React.FormEvent) => {
             </CardContent>
           </Card>
 
-          {firstName && (
-            <>
+          {/* Liste visible sans attendre le prénom */}
+          <>
               {/* Liste des produits */}
               <Card>
                 <CardHeader>
@@ -367,8 +367,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     </p>
   )}
 </div>
-            </>
-          )}
+          </>
         </form>
         
         <div className="text-center mt-16">

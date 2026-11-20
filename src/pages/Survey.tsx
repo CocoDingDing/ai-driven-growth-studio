@@ -144,8 +144,8 @@ const Survey = () => {
             </CardContent>
           </Card>
 
-          {firstName && (
-            <>
+          {/* Liste visible sans attendre le prénom */}
+          <>
               {/* Liste des produits */}
               <Card>
                 <CardHeader>
@@ -249,8 +249,7 @@ const Survey = () => {
                   </p>
                 )}
               </div>
-            </>
-          )}
+          </>
         </form>
       </div>
     </div>
