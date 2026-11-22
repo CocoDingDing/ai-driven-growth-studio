@@ -138,6 +138,8 @@ const SurveySection = () => {
   const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
   const [openItems, setOpenItems] = useState<number[]>([]);
   const [sessionId] = useState(() => crypto.randomUUID());
+  // Vérifie que l'email a un format valide (ex : nom@domaine.fr)
+  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -153,7 +155,7 @@ const SurveySection = () => {
         .upsert({
           session_id: sessionId,
           first_name: firstName || null,
-          email: email || null,
+          email: isEmailValid ? email.trim() : null,
           company: company || null,
           selected_products: selectedProductTitles,
         }, {
@@ -302,13 +304,54 @@ const handleSubmit = async (e: React.FormEvent) => {
               </Card>
 
 
+              {/* Informations personnelles : apparaît dès qu'une solution est cochée */}
+              {selectedProducts.length > 0 && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Informations personnelles</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="email">Adresse email *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          autoComplete="email"
+                          placeholder="vous@exemple.fr"
+                          className="mt-2"
+                        />
+                        {email && !isEmailValid && (
+                          <p className="mt-2 text-sm text-destructive">
+                            Merci d'indiquer une adresse email valide.
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <Label htmlFor="firstName">Prénom (optionnel)</Label>
+                        <Input
+                          id="firstName"
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
+                          autoComplete="given-name"
+                          className="mt-2"
+                        />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
               {/* Bouton d'envoi */}
 <div className="text-center">
   <Button 
     type="submit" 
     size="lg"
     className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
-    disabled={selectedProducts.length === 0 || submitting}
+    disabled={selectedProducts.length === 0 || !isEmailValid || submitting}
   >
     {submitting ? 'Envoi…' : 'Envoyer'}
   </Button>
