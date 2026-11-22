@@ -59,7 +59,7 @@ const Survey = () => {
 
   // Sauvegarder quand firstName, email, company ou selectedProducts changent
   useEffect(() => {
-    if (firstName) { // Ne sauvegarder que si le prénom est renseigné
+    if (selectedProducts.length > 0) { // Sauvegarder dès qu'une solution est cochée
       debouncedSave();
     }
   }, [firstName, email, company, selectedProducts]);
@@ -123,26 +123,6 @@ const Survey = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
-          {/* Prénom */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Informations personnelles</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="firstName">Prénom *</Label>
-                  <Input
-                    id="firstName"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                    className="mt-2"
-                  />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Liste visible sans attendre le prénom */}
           <>
@@ -210,7 +190,7 @@ const Survey = () => {
                   type="submit" 
                   size="lg"
                   className="bg-gradient-primary text-lg px-8 py-6 shadow-glow hover:shadow-lg transition-all duration-300"
-                  disabled={!firstName || submitting}
+                  disabled={selectedProducts.length === 0 || submitting}
                 >
                   {submitting ? 'Envoi…' : 'Envoyer'}
                 </Button>
